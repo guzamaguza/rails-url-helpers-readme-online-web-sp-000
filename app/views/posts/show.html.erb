@@ -1,2 +1,6 @@
 <h1><%= @post.title %></h1>
 <p><%= @post.description %></p>
+
+<% @posts.each do |post| %>
+  <div><a href='<%= "/posts/#{post.id}" %>'><%= post.title %></a></div>
+<% end %>
